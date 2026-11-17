@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Codificação de caracteres: garante que acentos (ç, ã, é) apareçam corretamente -->
+    <meta charset="UTF-8">
+    <!-- Viewport: essencial para a responsividade em celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rota Brasil - Mini site de viagens e turismo com destinos em destaque, simulador de orçamento e contato.">
+    <title>Rota Brasil | Viagens e Turismo</title>
+
+    <!-- Folha de estilos (CSS puro, sem frameworks) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== CABEÇALHO ==================== -->
+    <!-- O <header> fica fixo no topo graças ao "position: sticky" no CSS -->
+    <header class="cabecalho">
+        <div class="container cabecalho__conteudo">
+            <a href="#inicio" class="logo" aria-label="Rota Brasil - voltar ao início">
+                ✈️ Rota<span>Brasil</span>
+            </a>
+
+            <!-- Botão "hambúrguer": só aparece no celular para abrir/fechar o menu -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuPrincipal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- ==================== MENU DE NAVEGAÇÃO ==================== -->
+            <!-- Links por âncora (#id): levam até as seções da própria página -->
+            <nav class="menu" id="menuPrincipal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#orcamento">Orçamento</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botão do Modo Escuro: o JavaScript alterna a classe "dark-mode" no <body> -->
+            <button class="btn-tema" id="btnTema" aria-label="Ativar modo escuro" title="Alternar tema">
+                🌙
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== BANNER PRINCIPAL ==================== -->
+        <!-- Imagem de fundo definida no CSS + camada escura (overlay) para dar contraste ao texto -->
+        <section class="banner" id="inicio">
+            <div class="banner__overlay"></div>
+            <div class="container banner__conteudo">
+                <h1>Descubra o Brasil do seu jeito</h1>
+                <p>Praias paradisíacas, serras charmosas e cidades históricas esperando por você.</p>
+                <div class="banner__botoes">
+                    <a href="#destinos" class="btn btn--primario">Ver destinos</a>
+                    <a href="#orcamento" class="btn btn--contorno">Simular orçamento</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== DESTINOS EM DESTAQUE ==================== -->
+        <!-- Cada destino é um <article>: um conteúdo independente e completo -->
+        <section class="secao" id="destinos">
+            <div class="container">
+                <h2 class="secao__titulo">Destinos em Destaque</h2>
+                <p class="secao__subtitulo">Selecionamos os lugares mais procurados pelos nossos viajantes.</p>
+
+                <!-- Este contêiner usa CSS Grid para organizar os cards -->
+                <div class="grid-destinos">
+
+                    <article class="card">
+                        <img src="imagens/rio-de-janeiro.svg" alt="Ilustração do Pão de Açúcar no Rio de Janeiro ao pôr do sol" class="card__imagem" loading="lazy">
+                        <div class="card__corpo">
+                            <h3 class="card__titulo">Rio de Janeiro - RJ</h3>
+                            <p class="card__descricao">Cristo Redentor, Pão de Açúcar e as praias mais famosas do país em uma só cidade.</p>
+                            <!-- data-destino: guarda o nome que o JS usa para preencher o simulador -->
+                            <a href="#orcamento" class="btn btn--primario card__botao" data-destino="Rio de Janeiro">Simular viagem</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="imagens/gramado.svg" alt="Ilustração de montanhas e pinheiros da Serra Gaúcha" class="card__imagem" loading="lazy">
+                        <div class="card__corpo">
+                            <h3 class="card__titulo">Gramado - RS</h3>
+                            <p class="card__descricao">Clima de montanha, arquitetura europeia, chocolates artesanais e o famoso Natal Luz.</p>
+                            <a href="#orcamento" class="btn btn--primario card__botao" data-destino="Gramado">Simular viagem</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="imagens/fernando-de-noronha.svg" alt="Ilustração do mar azul e morros de Fernando de Noronha" class="card__imagem" loading="lazy">
+                        <div class="card__corpo">
+                            <h3 class="card__titulo">Fernando de Noronha - PE</h3>
+                            <p class="card__descricao">Arquipélago com águas cristalinas, golfinhos e algumas das praias mais bonitas do mundo.</p>
+                            <a href="#orcamento" class="btn btn--primario card__botao" data-destino="Fernando de Noronha">Simular viagem</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="imagens/foz-do-iguacu.svg" alt="Ilustração das Cataratas do Iguaçu cercadas pela mata" class="card__imagem" loading="lazy">
+                        <div class="card__corpo">
+                            <h3 class="card__titulo">Foz do Iguaçu - PR</h3>
+                            <p class="card__descricao">As impressionantes Cataratas do Iguaçu, uma das Sete Maravilhas Naturais do mundo.</p>
+                            <a href="#orcamento" class="btn btn--primario card__botao" data-destino="Foz do Iguaçu">Simular viagem</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="imagens/lencois-maranhenses.svg" alt="Ilustração das dunas brancas e lagoas dos Lençóis Maranhenses" class="card__imagem" loading="lazy">
+                        <div class="card__corpo">
+                            <h3 class="card__titulo">Lençóis Maranhenses - MA</h3>
+                            <p class="card__descricao">Dunas de areia branca com lagoas de água doce que se formam na época das chuvas.</p>
+                            <a href="#orcamento" class="btn btn--primario card__botao" data-destino="Lençóis Maranhenses">Simular viagem</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="imagens/salvador.svg" alt="Ilustração do litoral de Salvador com o farol da Barra" class="card__imagem" loading="lazy">
+                        <div class="card__corpo">
+                            <h3 class="card__titulo">Salvador - BA</h3>
+                            <p class="card__descricao">Pelourinho, culinária baiana, música e uma cultura riquíssima à beira-mar.</p>
+                            <a href="#orcamento" class="btn btn--primario card__botao" data-destino="Salvador">Simular viagem</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SIMULADOR DE ORÇAMENTO ==================== -->
+        <section class="secao secao--alternada" id="orcamento">
+            <div class="container orcamento">
+                <div class="orcamento__texto">
+                    <h2 class="secao__titulo">Simule seu Orçamento</h2>
+                    <p>
+                        Informe quantos dias vai viajar e quantas pessoas irão.
+                        O cálculo usa um custo médio de <strong id="custoDiarioTexto">R$ 200,00</strong>
+                        por pessoa, por dia (hospedagem + alimentação).
+                    </p>
+                    <p class="orcamento__destino" id="destinoEscolhido">Destino: <strong>a escolher</strong></p>
+                </div>
+
+                <!-- Formulário do simulador: o JS lê os valores e calcula o total -->
+                <form class="orcamento__form" id="formOrcamento" novalidate>
+                    <div class="campo">
+                        <label for="dias">Quantidade de dias</label>
+                        <input type="number" id="dias" name="dias" min="1" max="60" placeholder="Ex.: 5" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="pessoas">Quantidade de pessoas</label>
+                        <input type="number" id="pessoas" name="pessoas" min="1" max="20" placeholder="Ex.: 2" required>
+                    </div>
+
+                    <button type="submit" class="btn btn--primario btn--bloco">Calcular</button>
+
+                    <!-- Área onde o resultado aparece. aria-live avisa leitores de tela sobre a mudança -->
+                    <div class="orcamento__resultado" id="resultadoOrcamento" aria-live="polite">
+                        Preencha os campos para ver o valor estimado.
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ==================== FORMULÁRIO DE CONTATO ==================== -->
+        <section class="secao" id="contato">
+            <div class="container contato">
+                <h2 class="secao__titulo">Fale Conosco</h2>
+                <p class="secao__subtitulo">Tire suas dúvidas ou peça um roteiro personalizado.</p>
+
+                <!-- "novalidate" desliga a validação padrão do navegador, para que o nosso JS faça a validação -->
+                <form class="form-contato" id="formContato" novalidate>
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+                        <small class="campo__erro" id="erroNome"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+                        <small class="campo__erro" id="erroEmail"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem (opcional)</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte para onde você quer ir..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primario btn--bloco">Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== RODAPÉ ==================== -->
+    <footer class="rodape">
+        <div class="container rodape__conteudo">
+            <div>
+                <p class="logo">✈️ Rota<span>Brasil</span></p>
+                <p>Projeto avaliativo de Desenvolvimento Web - CENAD</p>
+            </div>
+            <nav aria-label="Links do rodapé">
+                <ul class="rodape__links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#orcamento">Orçamento</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- O ano é preenchido automaticamente pelo JavaScript -->
+        <p class="rodape__copy">&copy; <span id="anoAtual"></span> Rota Brasil. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- ==================== ALERTA PERSONALIZADO (MODAL) ==================== -->
+    <!-- Fica escondido até o JS adicionar a classe "ativo" -->
+    <div class="alerta" id="alerta" role="dialog" aria-modal="true" aria-labelledby="alertaTitulo" hidden>
+        <div class="alerta__caixa">
+            <div class="alerta__icone">✅</div>
+            <h3 id="alertaTitulo">Mensagem enviada!</h3>
+            <p id="alertaTexto">Obrigado pelo contato.</p>
+            <button class="btn btn--primario" id="alertaFechar">Fechar</button>
+        </div>
+    </div>
+
+    <!-- O script fica no final do <body> para carregar depois do HTML.
+         Assim, todos os elementos já existem quando o JS procurar por eles. -->
+    <script src="script.js"></script>
+</body>
+</html>

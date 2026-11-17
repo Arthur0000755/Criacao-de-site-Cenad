@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs><linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b4965"/><stop offset="1" stop-color="#f4a259"/></linearGradient></defs>
+  <rect width="800" height="500" fill="url(#ceu)"/>
+  <circle cx="600" cy="260" r="55" fill="#ffd98e" opacity="0.95"/>
+  <path d="M0 320 C100 250 160 150 260 170 C320 180 330 290 380 300 L470 250 C540 220 600 300 700 290 L800 280 L800 500 L0 500Z" fill="#14324a"/><path d="M0 380 Q200 350 400 380 T800 370 L800 500 L0 500Z" fill="#0f5e74"/><path d="M0 440 Q300 410 800 445 L800 500 L0 500Z" fill="#d9b779"/><g fill="#0d2233"><path d="M90 440 Q100 360 120 330 Q105 380 100 440Z"/><path d="M120 330 Q80 320 60 340 Q90 330 120 335Z M120 330 Q150 310 175 325 Q145 322 120 335Z M120 330 Q115 300 95 295 Q118 310 120 333Z"/></g>
+</svg>
