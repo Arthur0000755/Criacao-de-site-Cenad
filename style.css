@@ -252,7 +252,7 @@ textarea:focus-visible {
     min-height: calc(100vh - var(--altura-cabecalho));
     display: flex;
     align-items: center;
-    background-image: url("imagens/banner.svg");
+    background-image: url("imagens/banner.jpg");
     background-size: cover;        /* cobre toda a área sem distorcer */
     background-position: center;
     background-repeat: no-repeat;

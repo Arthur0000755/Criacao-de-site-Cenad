@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
-  <defs><linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ec8e3"/><stop offset="1" stop-color="#e8f7fc"/></linearGradient></defs>
-  <rect width="800" height="500" fill="url(#ceu)"/>
-  <circle cx="620" cy="110" r="55" fill="#ffd98e" opacity="0.95"/>
-  <path d="M0 300 Q150 220 300 290 Q450 230 600 300 Q700 250 800 280 L800 500 L0 500Z" fill="#fbf6ea"/><ellipse cx="220" cy="370" rx="140" ry="28" fill="#36b3c9"/><ellipse cx="560" cy="350" rx="110" ry="22" fill="#2aa0b8"/><path d="M0 420 Q200 380 400 430 T800 410 L800 500 L0 500Z" fill="#f1e6cf"/><ellipse cx="420" cy="460" rx="90" ry="16" fill="#4cc3d6"/>
-</svg>
