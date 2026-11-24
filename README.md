@@ -10,7 +10,7 @@ projeto/
 ├── index.html   → estrutura semântica (header, nav, section, article, footer)
 ├── style.css    → variáveis de cor, Flexbox, Grid, media queries, modo escuro
 ├── script.js    → modo escuro, simulador de orçamento, validação do formulário
-└── imagens/     → ilustrações locais (SVG)
+└── imagens/     → fotos locais (JPG otimizados)
 ```
 
 ## Funcionalidades em JavaScript
@@ -27,4 +27,4 @@ Abra a pasta no VS Code e use a extensão **Live Preview** (ou abra o `index.htm
 
 ## Trocar as imagens
 
-As imagens em `imagens/` são ilustrações SVG. Para usar fotos reais, salve-as na mesma pasta (ex.: `gramado.jpg`) e troque o `src` no `index.html`. Para o banner, troque o `url(...)` em `.banner` no `style.css`.
+As imagens em `imagens/` são fotos JPG (cards com 900px de largura e banner com 1920px, para o site carregar rápido). Para trocar uma foto, salve a nova na mesma pasta (ex.: `gramado.jpg`) e troque o `src` no `index.html`. Para o banner, troque o `url(...)` em `.banner` no `style.css`.
