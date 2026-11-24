@@ -3,6 +3,8 @@
 Projeto avaliativo de Desenvolvimento Web (CENAD — Prof. Wesley Souza).
 Feito só com HTML5, CSS3 e JavaScript puro, sem frameworks.
 
+🌐 **Site publicado:** https://arthur0000755.github.io/Criacao-de-site-Cenad/
+
 ## Estrutura
 
 ```
